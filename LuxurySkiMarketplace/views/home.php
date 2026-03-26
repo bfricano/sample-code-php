@@ -5,10 +5,10 @@ $pageTitle = 'Home';
 require_once __DIR__ . '/partials/header.php';
 ?>
 
-<section class="hero" style="background-image: linear-gradient(rgba(26,26,46,0.65), rgba(26,26,46,0.75)), url('https://images.unsplash.com/photo-1551524559-8af4e6624178?w=1600&h=900&fit=crop&q=80');">
+<section class="hero" style="background-image: linear-gradient(rgba(26,26,46,0.55), rgba(26,26,46,0.7)), url('https://images.unsplash.com/photo-1551524559-8af4e6624178?w=1600&h=900&fit=crop&q=80');">
     <div class="hero-content">
-        <h1>Welcome to Kypre</h1>
-        <p class="hero-subtitle">Luxury women's ski fashion, curated by Kylan. Featuring exclusive Goldbergh pieces, a Deer Valley-inspired collection, and handpicked pre-loved designer ski wear from the world's finest resorts.</p>
+        <h1>Deer Valley 2034 Winter Olympics</h1>
+        <p class="hero-subtitle">The world's most exclusive ski resort welcomes the 2034 Winter Olympic Games. Shop Kypre's curated luxury ski fashion to look your best on and off the slopes of Deer Valley, Utah.</p>
         <div class="hero-actions">
             <a href="index.php?page=catalog&category=goldbergh" class="btn btn-primary">Shop Goldbergh</a>
             <a href="index.php?page=catalog&category=deer-valley" class="btn btn-primary">Deer Valley Collection</a>
