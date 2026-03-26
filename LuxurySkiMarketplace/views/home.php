@@ -42,20 +42,7 @@ require_once __DIR__ . '/partials/header.php';
     <h2>Featured Pieces</h2>
     <div class="product-grid">
         <?php foreach ($featured as $product): ?>
-        <div class="product-card">
-            <div class="product-image-placeholder">
-                <span class="brand-tag"><?= htmlspecialchars($product['brand']) ?></span>
-                <?php if ($product['condition'] !== 'New with Tags'): ?>
-                    <span class="condition-tag"><?= htmlspecialchars($product['condition']) ?></span>
-                <?php endif; ?>
-            </div>
-            <div class="product-info">
-                <h3><?= htmlspecialchars($product['name']) ?></h3>
-                <p class="product-brand"><?= htmlspecialchars($product['brand']) ?></p>
-                <p class="product-price">$<?= number_format($product['price'], 2) ?></p>
-                <a href="index.php?page=product&id=<?= $product['id'] ?>" class="btn btn-small">View Details</a>
-            </div>
-        </div>
+            <?php include __DIR__ . '/partials/product_card.php'; ?>
         <?php endforeach; ?>
     </div>
 </section>

@@ -10,6 +10,7 @@
         "color": "White/Gold",
         "condition": "New with Tags",
         "image_placeholder": "goldbergh-fosfor-jacket.jpg",
+        "icon": "jacket",
         "featured": true,
         "stock": 3
     },
@@ -24,6 +25,7 @@
         "color": "Black",
         "condition": "New with Tags",
         "image_placeholder": "goldbergh-luxe-suit.jpg",
+        "icon": "suit",
         "featured": true,
         "stock": 2
     },
@@ -38,6 +40,7 @@
         "color": "Navy",
         "condition": "New with Tags",
         "image_placeholder": "goldbergh-hida-pants.jpg",
+        "icon": "pants",
         "featured": false,
         "stock": 5
     },
@@ -52,6 +55,7 @@
         "color": "Cream",
         "condition": "Like New",
         "image_placeholder": "moncler-grenoble-jacket.jpg",
+        "icon": "jacket",
         "featured": true,
         "stock": 1
     },
@@ -66,6 +70,7 @@
         "color": "Midnight Blue",
         "condition": "Excellent",
         "image_placeholder": "fusalp-belalp-jacket.jpg",
+        "icon": "jacket",
         "featured": true,
         "stock": 1
     },
@@ -80,6 +85,7 @@
         "color": "Black",
         "condition": "Very Good",
         "image_placeholder": "bogner-fire-ice-pants.jpg",
+        "icon": "pants",
         "featured": false,
         "stock": 1
     },
@@ -94,6 +100,7 @@
         "color": "Black/Silver",
         "condition": "New with Tags",
         "image_placeholder": "goldbergh-sparkle-base.jpg",
+        "icon": "base-layer",
         "featured": false,
         "stock": 8
     },
@@ -108,6 +115,7 @@
         "color": "Leopard Print",
         "condition": "New with Tags",
         "image_placeholder": "goldbergh-estelle-jacket.jpg",
+        "icon": "jacket",
         "featured": true,
         "stock": 4
     },
@@ -122,6 +130,7 @@
         "color": "Red/Gold",
         "condition": "Excellent - Vintage",
         "image_placeholder": "lacroix-aspen-suit.jpg",
+        "icon": "suit",
         "featured": true,
         "stock": 1
     },
@@ -136,6 +145,7 @@
         "color": "Sage Green",
         "condition": "New with Tags",
         "image_placeholder": "goldbergh-fierce-softshell.jpg",
+        "icon": "jacket",
         "featured": false,
         "stock": 6
     },
@@ -150,6 +160,7 @@
         "color": "White",
         "condition": "Like New",
         "image_placeholder": "toni-sailer-seraphine.jpg",
+        "icon": "jacket",
         "featured": false,
         "stock": 1
     },
@@ -164,6 +175,7 @@
         "color": "Black/Gold",
         "condition": "New with Tags",
         "image_placeholder": "goldbergh-luxury-gloves.jpg",
+        "icon": "gloves",
         "featured": false,
         "stock": 10
     },
@@ -178,6 +190,7 @@
         "color": "Rose Gold",
         "condition": "Good",
         "image_placeholder": "poc-obex-helmet.jpg",
+        "icon": "helmet",
         "featured": false,
         "stock": 1
     },
@@ -192,6 +205,7 @@
         "color": "Cream",
         "condition": "New with Tags",
         "image_placeholder": "goldbergh-polar-fleece.jpg",
+        "icon": "base-layer",
         "featured": false,
         "stock": 7
     },
@@ -206,6 +220,7 @@
         "color": "White/Blue",
         "condition": "Good - Tuned",
         "image_placeholder": "stockli-laser-skis.jpg",
+        "icon": "skis",
         "featured": true,
         "stock": 1
     },
@@ -220,6 +235,7 @@
         "color": "Alpine White",
         "condition": "New with Tags",
         "image_placeholder": "goldbergh-deer-valley-parka.jpg",
+        "icon": "jacket",
         "featured": true,
         "stock": 4
     },
@@ -234,6 +250,7 @@
         "color": "Midnight Navy",
         "condition": "New with Tags",
         "image_placeholder": "fusalp-deer-valley-suit.jpg",
+        "icon": "suit",
         "featured": true,
         "stock": 3
     },
@@ -248,6 +265,7 @@
         "color": "Red/White Star",
         "condition": "New with Tags",
         "image_placeholder": "perfect-moment-deer-valley.jpg",
+        "icon": "jacket",
         "featured": false,
         "stock": 5
     },
@@ -262,20 +280,22 @@
         "color": "Black",
         "condition": "New with Tags",
         "image_placeholder": "bogner-deer-valley-pants.jpg",
+        "icon": "pants",
         "featured": false,
         "stock": 6
     },
     {
         "id": "SKI020",
-        "name": "Goldbergh Deer Valley Après Knit",
+        "name": "Goldbergh Deer Valley Apres Knit",
         "brand": "Goldbergh",
         "category": "deer-valley",
-        "description": "Luxurious merino-cashmere blend après-ski sweater, ideal for Deer Valley's fireside lounges. Oversized fit with Goldbergh signature detailing.",
+        "description": "Luxurious merino-cashmere blend apres-ski sweater, ideal for Deer Valley's fireside lounges. Oversized fit with Goldbergh signature detailing.",
         "price": 385.00,
         "sizes": ["XS", "S", "M", "L", "XL"],
         "color": "Cream/Gold",
         "condition": "New with Tags",
         "image_placeholder": "goldbergh-deer-valley-knit.jpg",
+        "icon": "base-layer",
         "featured": false,
         "stock": 8
     }
