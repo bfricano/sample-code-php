@@ -1,0 +1,76 @@
+<?php
+require_once __DIR__ . '/../models/Product.php';
+$featured = Product::getFeatured();
+$pageTitle = 'Home';
+require_once __DIR__ . '/partials/header.php';
+?>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Kypre</h1>
+        <p class="hero-subtitle">Luxury women's ski fashion, curated by Kylan. Featuring exclusive Goldbergh pieces, a Deer Valley-inspired collection, and handpicked pre-loved designer ski wear from the world's finest resorts.</p>
+        <div class="hero-actions">
+            <a href="index.php?page=catalog&category=goldbergh" class="btn btn-primary">Shop Goldbergh</a>
+            <a href="index.php?page=catalog&category=deer-valley" class="btn btn-primary">Deer Valley Collection</a>
+            <a href="index.php?page=catalog&category=ski-collection" class="btn btn-secondary">Browse the Collection</a>
+        </div>
+    </div>
+</section>
+
+<section class="collections-intro">
+    <div class="collection-card">
+        <div class="collection-icon">&#9830;</div>
+        <h3>Goldbergh Luxury</h3>
+        <p>New-with-tags pieces from the Dutch luxury ski brand known for glamorous designs and impeccable quality.</p>
+        <a href="index.php?page=catalog&category=goldbergh" class="btn btn-outline">Explore</a>
+    </div>
+    <div class="collection-card">
+        <div class="collection-icon">&#9968;</div>
+        <h3>Deer Valley Collection</h3>
+        <p>Women's luxury ski fashion curated for Deer Valley's refined slopes. From Silver Lake Lodge to Empire Canyon, dress the part.</p>
+        <a href="index.php?page=catalog&category=deer-valley" class="btn btn-outline">Explore</a>
+    </div>
+    <div class="collection-card">
+        <div class="collection-icon">&#10052;</div>
+        <h3>The Ski Collection</h3>
+        <p>Pre-loved luxury ski wear from top-tier brands. Each piece hand-selected from seasons in Verbier, Courchevel, and St. Moritz.</p>
+        <a href="index.php?page=catalog&category=ski-collection" class="btn btn-outline">Explore</a>
+    </div>
+</section>
+
+<section class="featured-section">
+    <h2>Featured Pieces</h2>
+    <div class="product-grid">
+        <?php foreach ($featured as $product): ?>
+        <div class="product-card">
+            <div class="product-image-placeholder">
+                <span class="brand-tag"><?= htmlspecialchars($product['brand']) ?></span>
+                <?php if ($product['condition'] !== 'New with Tags'): ?>
+                    <span class="condition-tag"><?= htmlspecialchars($product['condition']) ?></span>
+                <?php endif; ?>
+            </div>
+            <div class="product-info">
+                <h3><?= htmlspecialchars($product['name']) ?></h3>
+                <p class="product-brand"><?= htmlspecialchars($product['brand']) ?></p>
+                <p class="product-price">$<?= number_format($product['price'], 2) ?></p>
+                <a href="index.php?page=product&id=<?= $product['id'] ?>" class="btn btn-small">View Details</a>
+            </div>
+        </div>
+        <?php endforeach; ?>
+    </div>
+</section>
+
+<section class="deer-valley-promo">
+    <div class="promo-content">
+        <h2>Women's Ski Fashion at Deer Valley</h2>
+        <p>Deer Valley Resort is synonymous with elegance -- and your ski wardrobe should match. Kypre's Deer Valley collection brings together the world's finest women's ski fashion brands, from Goldbergh's glamorous Dutch designs to Fusalp's French precision tailoring. Whether you're carving Lady Morgan or warming up at the Mariposa, arrive in style.</p>
+        <a href="index.php?page=catalog&category=deer-valley" class="btn btn-primary">Shop the Deer Valley Edit</a>
+    </div>
+</section>
+
+<section class="brand-story">
+    <h2>The Kypre Story</h2>
+    <p>Kypre was born from a passion for luxury women's ski fashion. When Kylan's girlfriend decided to refresh her designer ski wardrobe, we saw an opportunity to share these exquisite pieces with fellow ski enthusiasts who appreciate craftsmanship and style. Based in the heart of Deer Valley country, we're proud to offer brand-new Goldbergh pieces, a curated Deer Valley collection, and pre-loved designer ski wear from the world's most exclusive resorts.</p>
+</section>
+
+<?php require_once __DIR__ . '/partials/footer.php'; ?>
