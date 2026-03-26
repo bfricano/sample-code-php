@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <?= date('Y') ?> Kypre | 19 N Green St, Chicago, IL 60607 | 773.802.6615 | Powered by Authorize.Net secure payments.</p>
+            <p>&copy; <?= date('Y') ?> Kypre | 19 N Green St, Chicago, IL 60607 | 773.802.6615 | Powered by Summit Operations Partners</p>
         </div>
     </footer>
     <script src="js/app.js"></script>
