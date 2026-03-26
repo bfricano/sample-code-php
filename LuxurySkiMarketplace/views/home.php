@@ -5,7 +5,7 @@ $pageTitle = 'Home';
 require_once __DIR__ . '/partials/header.php';
 ?>
 
-<section class="hero">
+<section class="hero" style="background-image: linear-gradient(rgba(26,26,46,0.65), rgba(26,26,46,0.75)), url('https://images.unsplash.com/photo-1551524559-8af4e6624178?w=1600&h=900&fit=crop&q=80');">
     <div class="hero-content">
         <h1>Welcome to Kypre</h1>
         <p class="hero-subtitle">Luxury women's ski fashion, curated by Kylan. Featuring exclusive Goldbergh pieces, a Deer Valley-inspired collection, and handpicked pre-loved designer ski wear from the world's finest resorts.</p>
@@ -47,7 +47,7 @@ require_once __DIR__ . '/partials/header.php';
     </div>
 </section>
 
-<section class="deer-valley-promo">
+<section class="deer-valley-promo" style="background-image: linear-gradient(rgba(26,26,46,0.6), rgba(15,52,96,0.75)), url('https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=1600&h=900&fit=crop&q=80');">
     <div class="promo-content">
         <h2>Women's Ski Fashion at Deer Valley</h2>
         <p>Deer Valley Resort is synonymous with elegance -- and your ski wardrobe should match. Kypre's Deer Valley collection brings together the world's finest women's ski fashion brands, from Goldbergh's glamorous Dutch designs to Fusalp's French precision tailoring. Whether you're carving Lady Morgan or warming up at the Mariposa, arrive in style.</p>

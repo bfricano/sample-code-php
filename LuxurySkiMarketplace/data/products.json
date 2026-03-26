@@ -9,7 +9,7 @@
         "sizes": ["XS", "S", "M", "L", "XL"],
         "color": "White/Gold",
         "condition": "New with Tags",
-        "image_placeholder": "goldbergh-fosfor-jacket.jpg",
+        "image": "https://images.unsplash.com/photo-1609902726285-00668009f004?w=600&h=750&fit=crop&q=80",
         "icon": "jacket",
         "featured": true,
         "stock": 3
@@ -24,7 +24,7 @@
         "sizes": ["XS", "S", "M", "L"],
         "color": "Black",
         "condition": "New with Tags",
-        "image_placeholder": "goldbergh-luxe-suit.jpg",
+        "image": "https://images.unsplash.com/photo-1515689903149-9a79e4fbc71a?w=600&h=750&fit=crop&q=80",
         "icon": "suit",
         "featured": true,
         "stock": 2
@@ -39,7 +39,7 @@
         "sizes": ["XS", "S", "M", "L", "XL"],
         "color": "Navy",
         "condition": "New with Tags",
-        "image_placeholder": "goldbergh-hida-pants.jpg",
+        "image": "https://images.unsplash.com/photo-1547499417-61e8c99e4048?w=600&h=750&fit=crop&q=80",
         "icon": "pants",
         "featured": false,
         "stock": 5
@@ -54,7 +54,7 @@
         "sizes": ["S"],
         "color": "Cream",
         "condition": "Like New",
-        "image_placeholder": "moncler-grenoble-jacket.jpg",
+        "image": "https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=600&h=750&fit=crop&q=80",
         "icon": "jacket",
         "featured": true,
         "stock": 1
@@ -69,7 +69,7 @@
         "sizes": ["S"],
         "color": "Midnight Blue",
         "condition": "Excellent",
-        "image_placeholder": "fusalp-belalp-jacket.jpg",
+        "image": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&h=750&fit=crop&q=80",
         "icon": "jacket",
         "featured": true,
         "stock": 1
@@ -84,7 +84,7 @@
         "sizes": ["S"],
         "color": "Black",
         "condition": "Very Good",
-        "image_placeholder": "bogner-fire-ice-pants.jpg",
+        "image": "https://images.unsplash.com/photo-1565992441121-4367c2967103?w=600&h=750&fit=crop&q=80",
         "icon": "pants",
         "featured": false,
         "stock": 1
@@ -99,7 +99,7 @@
         "sizes": ["XS", "S", "M", "L"],
         "color": "Black/Silver",
         "condition": "New with Tags",
-        "image_placeholder": "goldbergh-sparkle-base.jpg",
+        "image": "https://images.unsplash.com/photo-1578681994506-b8f463449011?w=600&h=750&fit=crop&q=80",
         "icon": "base-layer",
         "featured": false,
         "stock": 8
@@ -114,7 +114,7 @@
         "sizes": ["XS", "S", "M", "L", "XL"],
         "color": "Leopard Print",
         "condition": "New with Tags",
-        "image_placeholder": "goldbergh-estelle-jacket.jpg",
+        "image": "https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=600&h=750&fit=crop&q=80",
         "icon": "jacket",
         "featured": true,
         "stock": 4
@@ -129,7 +129,7 @@
         "sizes": ["S"],
         "color": "Red/Gold",
         "condition": "Excellent - Vintage",
-        "image_placeholder": "lacroix-aspen-suit.jpg",
+        "image": "https://images.unsplash.com/photo-1517483000871-1dbf64a6e1c6?w=600&h=750&fit=crop&q=80",
         "icon": "suit",
         "featured": true,
         "stock": 1
@@ -144,7 +144,7 @@
         "sizes": ["XS", "S", "M", "L"],
         "color": "Sage Green",
         "condition": "New with Tags",
-        "image_placeholder": "goldbergh-fierce-softshell.jpg",
+        "image": "https://images.unsplash.com/photo-1580657018950-c7f7d6a6d990?w=600&h=750&fit=crop&q=80",
         "icon": "jacket",
         "featured": false,
         "stock": 6
@@ -159,7 +159,7 @@
         "sizes": ["S"],
         "color": "White",
         "condition": "Like New",
-        "image_placeholder": "toni-sailer-seraphine.jpg",
+        "image": "https://images.unsplash.com/photo-1520706695902-47230a069645?w=600&h=750&fit=crop&q=80",
         "icon": "jacket",
         "featured": false,
         "stock": 1
@@ -174,7 +174,7 @@
         "sizes": ["S", "M", "L"],
         "color": "Black/Gold",
         "condition": "New with Tags",
-        "image_placeholder": "goldbergh-luxury-gloves.jpg",
+        "image": "https://images.unsplash.com/photo-1545170217-7b3a128b8534?w=600&h=750&fit=crop&q=80",
         "icon": "gloves",
         "featured": false,
         "stock": 10
@@ -189,7 +189,7 @@
         "sizes": ["S"],
         "color": "Rose Gold",
         "condition": "Good",
-        "image_placeholder": "poc-obex-helmet.jpg",
+        "image": "https://images.unsplash.com/photo-1551524559-8af4e6624178?w=600&h=750&fit=crop&q=80",
         "icon": "helmet",
         "featured": false,
         "stock": 1
@@ -204,7 +204,7 @@
         "sizes": ["XS", "S", "M", "L", "XL"],
         "color": "Cream",
         "condition": "New with Tags",
-        "image_placeholder": "goldbergh-polar-fleece.jpg",
+        "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&h=750&fit=crop&q=80",
         "icon": "base-layer",
         "featured": false,
         "stock": 7
@@ -219,7 +219,7 @@
         "sizes": ["156cm"],
         "color": "White/Blue",
         "condition": "Good - Tuned",
-        "image_placeholder": "stockli-laser-skis.jpg",
+        "image": "https://images.unsplash.com/photo-1565992441121-4367c2967103?w=600&h=750&fit=crop&q=80",
         "icon": "skis",
         "featured": true,
         "stock": 1
@@ -234,7 +234,7 @@
         "sizes": ["XS", "S", "M", "L"],
         "color": "Alpine White",
         "condition": "New with Tags",
-        "image_placeholder": "goldbergh-deer-valley-parka.jpg",
+        "image": "https://images.unsplash.com/photo-1609902726285-00668009f004?w=600&h=750&fit=crop&q=80",
         "icon": "jacket",
         "featured": true,
         "stock": 4
@@ -249,7 +249,7 @@
         "sizes": ["XS", "S", "M", "L"],
         "color": "Midnight Navy",
         "condition": "New with Tags",
-        "image_placeholder": "fusalp-deer-valley-suit.jpg",
+        "image": "https://images.unsplash.com/photo-1515689903149-9a79e4fbc71a?w=600&h=750&fit=crop&q=80",
         "icon": "suit",
         "featured": true,
         "stock": 3
@@ -264,7 +264,7 @@
         "sizes": ["XS", "S", "M", "L", "XL"],
         "color": "Red/White Star",
         "condition": "New with Tags",
-        "image_placeholder": "perfect-moment-deer-valley.jpg",
+        "image": "https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=600&h=750&fit=crop&q=80",
         "icon": "jacket",
         "featured": false,
         "stock": 5
@@ -279,7 +279,7 @@
         "sizes": ["XS", "S", "M", "L"],
         "color": "Black",
         "condition": "New with Tags",
-        "image_placeholder": "bogner-deer-valley-pants.jpg",
+        "image": "https://images.unsplash.com/photo-1547499417-61e8c99e4048?w=600&h=750&fit=crop&q=80",
         "icon": "pants",
         "featured": false,
         "stock": 6
@@ -294,7 +294,7 @@
         "sizes": ["XS", "S", "M", "L", "XL"],
         "color": "Cream/Gold",
         "condition": "New with Tags",
-        "image_placeholder": "goldbergh-deer-valley-knit.jpg",
+        "image": "https://images.unsplash.com/photo-1578681994506-b8f463449011?w=600&h=750&fit=crop&q=80",
         "icon": "base-layer",
         "featured": false,
         "stock": 8

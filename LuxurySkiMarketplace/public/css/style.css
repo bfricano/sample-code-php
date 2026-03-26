@@ -143,6 +143,8 @@ img { max-width: 100%; }
 /* -- Hero Section -- */
 .hero {
     background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 50%, #0f3460 100%);
+    background-size: cover;
+    background-position: center;
     color: var(--color-white);
     padding: 6rem 2rem;
     text-align: center;
@@ -274,6 +276,8 @@ img { max-width: 100%; }
 /* -- Deer Valley Promo -- */
 .deer-valley-promo {
     background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 60%, #16213e 100%);
+    background-size: cover;
+    background-position: center;
     color: var(--color-white);
     padding: 5rem 2rem;
     text-align: center;
@@ -335,40 +339,37 @@ img { max-width: 100%; }
     transform: translateY(-2px);
 }
 
-/* Visual product image with brand colors and SVG icons */
-.product-image-visual {
-    height: 320px;
+/* Product image cards with real photos */
+.product-image-wrap {
+    height: 340px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(145deg, #e8e4df 0%, #d4cfc8 100%);
+}
+
+.product-image-wrap.large {
+    height: 520px;
+    border-radius: var(--radius);
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.05);
+}
+
+.product-img-fallback {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #1a1a2e 0%, #2d2d5e 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.product-image-visual.large {
-    height: 520px;
-}
-
-.product-icon {
-    width: 100px;
-    height: 100px;
-    opacity: 0.6;
-    transition: opacity 0.3s, transform 0.3s;
-}
-
-.product-icon.large-icon {
-    width: 160px;
-    height: 160px;
-}
-
-.product-icon svg {
-    width: 100%;
-    height: 100%;
-}
-
-.product-card:hover .product-icon {
-    opacity: 0.85;
-    transform: scale(1.08);
 }
 
 .product-card-link {
@@ -379,35 +380,15 @@ img { max-width: 100%; }
 
 .category-tag {
     position: absolute;
-    bottom: 42px;
+    bottom: 12px;
     left: 12px;
     font-size: 0.6rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.45);
-}
-
-.color-swatch-row {
-    position: absolute;
-    bottom: 12px;
-    left: 12px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.color-dot {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    border: 2px solid rgba(255,255,255,0.3);
-}
-
-.color-label {
-    font-size: 0.65rem;
-    color: rgba(255,255,255,0.5);
-    letter-spacing: 0.5px;
-    margin-left: 4px;
+    color: rgba(255,255,255,0.7);
+    background: rgba(0,0,0,0.4);
+    padding: 3px 8px;
+    border-radius: 2px;
 }
 
 .product-price-row {

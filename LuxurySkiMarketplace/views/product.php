@@ -14,18 +14,18 @@ if (!$product) {
 
 $pageTitle = $product['name'];
 require_once __DIR__ . '/partials/header.php';
-require_once __DIR__ . '/partials/product_helpers.php';
-$brandColors = getBrandColors($product['brand']);
-$iconSvg = getProductIcon($product['icon'] ?? 'jacket');
+$hasImage = !empty($product['image']);
 ?>
 
 <section class="product-detail">
     <div class="product-detail-layout">
         <div class="product-detail-image">
-            <div class="product-image-visual large" style="background: linear-gradient(145deg, <?= $brandColors[0] ?> 0%, <?= $brandColors[1] ?> 100%);">
-                <div class="product-icon large-icon" style="color: <?= $brandColors[2] ?>;">
-                    <?= $iconSvg ?>
-                </div>
+            <div class="product-image-wrap large">
+                <?php if ($hasImage): ?>
+                    <img src="<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['name']) ?>" class="product-img" loading="lazy">
+                <?php else: ?>
+                    <div class="product-img-fallback"></div>
+                <?php endif; ?>
                 <span class="brand-tag"><?= htmlspecialchars($product['brand']) ?></span>
                 <?php if ($product['condition'] !== 'New with Tags'): ?>
                     <span class="condition-tag"><?= htmlspecialchars($product['condition']) ?></span>
