@@ -12,6 +12,13 @@ $categories = json_decode(CATEGORIES, true);
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <span>19 N Green St, Chicago, IL 60607</span>
+            <span>Tel: 773.802.6615</span>
+            <span>Free shipping on orders over $<?= number_format(FREE_SHIPPING_THRESHOLD, 0) ?></span>
+        </div>
+    </div>
     <header class="site-header">
         <div class="header-container">
             <a href="index.php" class="logo">

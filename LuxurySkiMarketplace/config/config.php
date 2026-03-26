@@ -16,6 +16,12 @@ define('TAX_RATE', 0.08);
 define('SHIPPING_FLAT_RATE', 15.00);
 define('FREE_SHIPPING_THRESHOLD', 500.00);
 
+// Company details
+define('COMPANY_NAME', 'Kypre');
+define('COMPANY_ADDRESS', '19 N Green St');
+define('COMPANY_CITY', 'Chicago, IL 60607');
+define('COMPANY_PHONE', '773.802.6615');
+
 // Data storage paths
 define('DATA_DIR', __DIR__ . '/../data');
 define('PRODUCTS_FILE', DATA_DIR . '/products.json');

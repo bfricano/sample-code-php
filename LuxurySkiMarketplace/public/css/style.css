@@ -46,6 +46,28 @@ a {
 
 img { max-width: 100%; }
 
+/* -- Top Bar -- */
+.top-bar {
+    background: var(--color-accent);
+    color: var(--color-primary);
+    font-size: 0.72rem;
+    letter-spacing: 0.5px;
+    padding: 6px 0;
+}
+
+.top-bar-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar span {
+    font-weight: 500;
+}
+
 /* -- Header -- */
 .site-header {
     background: var(--color-primary);

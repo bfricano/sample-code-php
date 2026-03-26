@@ -26,12 +26,15 @@
             </div>
             <div class="footer-section">
                 <h4>Contact</h4>
-                <p>Kypre Luxury Marketplace</p>
+                <p>Kypre</p>
+                <p>19 N Green St</p>
+                <p>Chicago, IL 60607</p>
+                <p>Tel: 773.802.6615</p>
                 <p>Curated by Kylan</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <?= date('Y') ?> Kypre. All rights reserved. Powered by Authorize.Net secure payments.</p>
+            <p>&copy; <?= date('Y') ?> Kypre | 19 N Green St, Chicago, IL 60607 | 773.802.6615 | Powered by Authorize.Net secure payments.</p>
         </div>
     </footer>
     <script src="js/app.js"></script>
