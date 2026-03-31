@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYPRE - Luxury Women's Ski Marketplace</title>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --navy: #1a1a2e;
+  --navy-light: #16213e;
+  --gold: #c9a96e;
+  --gold-light: #d4ba85;
+  --gold-dark: #b8944f;
+  --cream: #faf8f5;
+  --white: #ffffff;
+  --text: #333333;
+  --text-light: #666666;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+}
+
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* Announcement Bar */
+.announcement-bar {
+  background: var(--gold);
+  color: var(--navy);
+  text-align: center;
+  padding: 8px 20px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.announcement-bar span { margin: 0 12px; opacity: 0.6; }
+
+/* Header */
+.site-header {
+  background: var(--navy);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  letter-spacing: 12px;
+  color: var(--gold);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.main-nav { display: flex; align-items: center; gap: 32px; }
+
+.main-nav a {
+  color: rgba(255,255,255,0.75);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+  font-weight: 400;
+}
+
+.main-nav a:hover { color: var(--gold); }
+
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--gold); margin: 5px 0; transition: 0.3s; }
+
+/* Hero */
+.hero {
+  position: relative;
+  height: 85vh;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1551524559-8af4e6624178?w=1600&h=900&fit=crop&q=80') center/cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(26,26,46,0.55) 0%, rgba(26,26,46,0.75) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  padding: 0 30px;
+}
+
+.hero-tag {
+  display: inline-block;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 6px 20px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  color: rgba(255,255,255,0.85);
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 36px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+.btn-outline-gold {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+}
+
+.btn-outline-gold:hover { background: var(--gold); color: var(--navy); }
+
+/* Section Shared */
+.section { padding: 80px 40px; }
+.section-center { text-align: center; }
+
+.section-title {
+  font-size: 36px;
+  color: var(--navy);
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.section-subtitle {
+  color: var(--text-light);
+  font-size: 15px;
+  letter-spacing: 1px;
+  max-width: 600px;
+  margin: 0 auto 48px;
+}
+
+.gold-line {
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 16px auto 20px;
+}
+
+/* Collections */
+.collections-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.collection-card {
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.collection-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.collection-card:hover img { transform: scale(1.05); }
+
+.collection-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(26,26,46,0.8) 0%, rgba(26,26,46,0.2) 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px;
+}
+
+.collection-card-overlay h3 {
+  color: var(--white);
+  font-size: 24px;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.collection-card-overlay p {
+  color: rgba(255,255,255,0.7);
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.card-link {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.card-link::after { content: ' \2192'; }
+
+/* Deer Valley Promo */
+.dv-promo {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.dv-promo-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=1600&h=900&fit=crop&q=80') center/cover no-repeat;
+}
+
+.dv-promo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(26,26,46,0.9) 0%, rgba(26,26,46,0.5) 60%, rgba(26,26,46,0.3) 100%);
+}
+
+.dv-promo-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  width: 100%;
+}
+
+.dv-promo-content .hero-tag { margin-bottom: 20px; }
+
+.dv-promo-content h2 {
+  font-size: 42px;
+  color: var(--white);
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.dv-promo-content p {
+  color: rgba(255,255,255,0.8);
+  font-size: 16px;
+  max-width: 550px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+/* Products Grid */
+.products-grid {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.product-card {
+  background: var(--white);
+  border: 1px solid #eee;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.product-card:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+}
+
+.product-image {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+  background: #f5f3f0;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-image img { transform: scale(1.08); }
+
+.product-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--navy);
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  font-weight: 500;
+}
+
+.condition-tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  font-weight: 600;
+}
+
+.product-info { padding: 20px; }
+
+.product-brand {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.product-name {
+  font-family: Georgia, serif;
+  font-size: 17px;
+  color: var(--navy);
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.product-color {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 18px;
+  color: var(--navy);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Brand Story */
+.brand-story {
+  background: var(--cream);
+}
+
+.brand-story-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.brand-story-inner .section-title { color: var(--navy); }
+
+.brand-story-inner p {
+  color: var(--text-light);
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+.brand-story-inner .founder {
+  font-family: Georgia, serif;
+  font-style: italic;
+  color: var(--gold-dark);
+  font-size: 15px;
+  margin-top: 12px;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.6);
+  padding: 64px 40px 0;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-brand .logo { font-size: 24px; letter-spacing: 8px; margin-bottom: 16px; display: inline-block; }
+
+.footer-brand p { font-size: 14px; line-height: 1.8; margin-bottom: 8px; }
+
+.footer-col h4 {
+  font-family: Georgia, serif;
+  color: var(--gold);
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+
+.footer-col a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  transition: color 0.3s;
+}
+
+.footer-col a:hover { color: var(--gold); }
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.footer-bottom a { color: var(--gold); }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .announcement-bar { font-size: 10px; padding: 6px 12px; }
+  .announcement-bar .hide-mobile { display: none; }
+
+  .header-inner { padding: 0 20px; height: 60px; }
+  .logo { font-size: 24px; letter-spacing: 8px; }
+  .main-nav { display: none; }
+  .main-nav.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: var(--navy);
+    padding: 20px;
+    gap: 16px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .nav-toggle { display: block; }
+
+  .hero { height: 70vh; min-height: 450px; }
+  .hero h1 { font-size: 32px; }
+  .hero p { font-size: 15px; }
+  .hero-buttons { flex-direction: column; align-items: center; }
+
+  .section { padding: 48px 20px; }
+  .section-title { font-size: 28px; }
+
+  .collections-grid { grid-template-columns: 1fr; gap: 16px; }
+  .collection-card { height: 300px; }
+
+  .products-grid { grid-template-columns: 1fr; gap: 20px; }
+  .product-image { height: 320px; }
+
+  .dv-promo-content h2 { font-size: 28px; }
+  .dv-promo-content { padding: 40px 20px; }
+
+  .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="announcement-bar">
+  <span class="hide-mobile">19 N Green St, Chicago, IL 60607</span>
+  <span class="hide-mobile">|</span>
+  <span class="hide-mobile">Tel: 773.802.6615</span>
+  <span class="hide-mobile">|</span>
+  Free shipping on orders over $500
+</div>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo">KYPRE</a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#">Home</a>
+      <a href="#">Shop All</a>
+      <a href="#">Goldbergh</a>
+      <a href="#">Ski Collection</a>
+      <a href="#">Deer Valley</a>
+      <a href="#">Cart (0)</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" onclick="document.getElementById('mainNav').classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Kypre Luxury Ski Fashion</div>
+    <h1>Deer Valley 2034 Winter Olympics</h1>
+    <p>The world's most exclusive ski resort welcomes the 2034 Winter Olympic Games. Shop Kypre's curated luxury ski fashion to look your best on and off the slopes of Deer Valley, Utah.</p>
+    <div class="hero-buttons">
+      <a href="#" class="btn btn-gold">Shop Goldbergh</a>
+      <a href="#" class="btn btn-outline">Deer Valley Collection</a>
+      <a href="#" class="btn btn-outline">Browse the Collection</a>
+    </div>
+  </div>
+</section>
+
+<!-- Collections -->
+<section class="section section-center">
+  <h2 class="section-title">Curated Collections</h2>
+  <div class="gold-line"></div>
+  <p class="section-subtitle">Explore our handpicked collections of luxury ski fashion from the world's finest brands.</p>
+  <div class="collections-grid">
+    <div class="collection-card">
+      <img src="https://images.unsplash.com/photo-1515689903149-9a79e4fbc71a?w=600&h=750&fit=crop&q=80" alt="Goldbergh Luxury">
+      <div class="collection-card-overlay">
+        <h3>Goldbergh Luxury</h3>
+        <p>Premium Dutch ski fashion with iconic glamour</p>
+        <span class="card-link">Shop Now</span>
+      </div>
+    </div>
+    <div class="collection-card">
+      <img src="https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=600&h=750&fit=crop&q=80" alt="Deer Valley Collection">
+      <div class="collection-card-overlay">
+        <h3>Deer Valley Collection</h3>
+        <p>Curated for the 2034 Winter Olympics</p>
+        <span class="card-link">Shop Now</span>
+      </div>
+    </div>
+    <div class="collection-card">
+      <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&h=750&fit=crop&q=80" alt="The Ski Collection">
+      <div class="collection-card-overlay">
+        <h3>The Ski Collection</h3>
+        <p>Complete your slope-to-lodge wardrobe</p>
+        <span class="card-link">Shop Now</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Deer Valley Promo -->
+<section class="dv-promo">
+  <div class="dv-promo-bg"></div>
+  <div class="dv-promo-overlay"></div>
+  <div class="dv-promo-content">
+    <div class="hero-tag">2034 Winter Olympics</div>
+    <h2>Deer Valley, Utah</h2>
+    <p>Experience the pinnacle of luxury skiing where world-class terrain meets unparalleled elegance. Kypre brings you exclusive pieces curated for the most discerning skiers heading to the 2034 Games.</p>
+    <a href="#" class="btn btn-gold">Shop Deer Valley Collection</a>
+  </div>
+</section>
+
+<!-- Featured Products -->
+<section class="section section-center">
+  <h2 class="section-title">Featured Products</h2>
+  <div class="gold-line"></div>
+  <p class="section-subtitle">Handpicked luxury ski fashion from Goldbergh, Moncler, Fusalp, and more.</p>
+  <div class="products-grid">
+
+    <a href="#" class="product-card">
+      <div class="product-image">
+        <img src="https://goldbergh.com/cdn/shop/files/GB02390254_8040_MV.jpg?v=1760618197&width=720" alt="Goldbergh Fosfor Ski Jacket">
+        <span class="product-tag">Goldbergh</span>
+      </div>
+      <div class="product-info">
+        <div class="product-brand">Goldbergh</div>
+        <div class="product-name">Fosfor Ski Jacket</div>
+        <div class="product-color">White / Gold</div>
+        <div class="product-price">$899.00</div>
+      </div>
+    </a>
+
+    <a href="#" class="product-card">
+      <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1515689903149-9a79e4fbc71a?w=600&h=750&fit=crop&q=80" alt="Goldbergh Luxe Ski Suit">
+        <span class="product-tag">Goldbergh</span>
+      </div>
+      <div class="product-info">
+        <div class="product-brand">Goldbergh</div>
+        <div class="product-name">Luxe Ski Suit</div>
+        <div class="product-color">Black</div>
+        <div class="product-price">$1,450.00</div>
+      </div>
+    </a>
+
+    <a href="#" class="product-card">
+      <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=600&h=750&fit=crop&q=80" alt="Moncler Grenoble Down Ski Jacket">
+        <span class="product-tag">Moncler</span>
+        <span class="condition-tag">Like New</span>
+      </div>
+      <div class="product-info">
+        <div class="product-brand">Moncler Grenoble</div>
+        <div class="product-name">Down Ski Jacket</div>
+        <div class="product-color">Cream</div>
+        <div class="product-price">$1,295.00</div>
+      </div>
+    </a>
+
+    <a href="#" class="product-card">
+      <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&h=750&fit=crop&q=80" alt="Fusalp Belalp Ski Jacket">
+        <span class="product-tag">Fusalp</span>
+        <span class="condition-tag">Excellent</span>
+      </div>
+      <div class="product-info">
+        <div class="product-brand">Fusalp</div>
+        <div class="product-name">Belalp Ski Jacket</div>
+        <div class="product-color">Midnight Blue</div>
+        <div class="product-price">$875.00</div>
+      </div>
+    </a>
+
+    <a href="#" class="product-card">
+      <div class="product-image">
+        <img src="https://goldbergh.com/cdn/shop/files/GB02390254_7484_MV.png?v=1758713749&width=720" alt="Goldbergh Estelle Ski Jacket">
+        <span class="product-tag">Goldbergh</span>
+      </div>
+      <div class="product-info">
+        <div class="product-brand">Goldbergh</div>
+        <div class="product-name">Estelle Ski Jacket</div>
+        <div class="product-color">Leopard Print</div>
+        <div class="product-price">$749.00</div>
+      </div>
+    </a>
+
+    <a href="#" class="product-card">
+      <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1517483000871-1dbf64a6e1c6?w=600&h=750&fit=crop&q=80" alt="Lacroix Aspen Ski Suit">
+        <span class="product-tag">Lacroix</span>
+        <span class="condition-tag">Excellent - Vintage</span>
+      </div>
+      <div class="product-info">
+        <div class="product-brand">Lacroix</div>
+        <div class="product-name">Aspen Ski Suit</div>
+        <div class="product-color">Red / Gold</div>
+        <div class="product-price">$1,850.00</div>
+      </div>
+    </a>
+
+    <a href="#" class="product-card">
+      <div class="product-image">
+        <img src="https://goldbergh.com/cdn/shop/files/GB01679254_8000_MV.jpg?v=1758269219&width=720" alt="Goldbergh Fierce Softshell">
+        <span class="product-tag">Goldbergh</span>
+      </div>
+      <div class="product-info">
+        <div class="product-brand">Goldbergh</div>
+        <div class="product-name">Fierce Softshell</div>
+        <div class="product-color">Sage Green</div>
+        <div class="product-price">$599.00</div>
+      </div>
+    </a>
+
+    <a href="#" class="product-card">
+      <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1565992441121-4367c2967103?w=600&h=750&fit=crop&q=80" alt="Stockli Laser AX Skis">
+        <span class="product-tag">Stockli</span>
+        <span class="condition-tag">Good - Tuned</span>
+      </div>
+      <div class="product-info">
+        <div class="product-brand">Stockli</div>
+        <div class="product-name">Laser AX Skis</div>
+        <div class="product-color">White / Blue</div>
+        <div class="product-price">$950.00</div>
+      </div>
+    </a>
+
+    <a href="#" class="product-card">
+      <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1609902726285-00668009f004?w=600&h=750&fit=crop&q=80" alt="Goldbergh Deer Valley Parka">
+        <span class="product-tag">Goldbergh</span>
+      </div>
+      <div class="product-info">
+        <div class="product-brand">Goldbergh</div>
+        <div class="product-name">Deer Valley Parka</div>
+        <div class="product-color">Alpine White</div>
+        <div class="product-price">$1,195.00</div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- Brand Story -->
+<section class="section brand-story">
+  <div class="brand-story-inner">
+    <h2 class="section-title">The Kypre Story</h2>
+    <div class="gold-line"></div>
+    <p>Kypre was born from a passion for the intersection of luxury fashion and alpine sport. Curated by Kylan, our marketplace brings together the world's most coveted ski brands -- from Goldbergh's glamorous Dutch designs to Moncler Grenoble's iconic down jackets and Fusalp's refined French silhouettes.</p>
+    <p>Every piece in our collection is hand-selected for quality, style, and performance. Whether you're carving fresh powder at Deer Valley or enjoying apr&egrave;s-ski by the fire, Kypre ensures you look and feel extraordinary.</p>
+    <p>Based in Chicago's vibrant Fulton Market district, we ship worldwide with the care and attention that luxury fashion deserves.</p>
+    <div class="founder">-- Kylan, Founder of Kypre</div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#" class="logo">KYPRE</a>
+      <p>Luxury women's ski marketplace curated by Kylan.</p>
+      <p>19 N Green St<br>Chicago, IL 60607</p>
+      <p>Tel: 773.802.6615</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#">Shop All</a></li>
+        <li><a href="#">Goldbergh</a></li>
+        <li><a href="#">Ski Collection</a></li>
+        <li><a href="#">Deer Valley</a></li>
+        <li><a href="#">New Arrivals</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Brands</h4>
+      <ul>
+        <li><a href="#">Goldbergh</a></li>
+        <li><a href="#">Moncler Grenoble</a></li>
+        <li><a href="#">Fusalp</a></li>
+        <li><a href="#">Lacroix</a></li>
+        <li><a href="#">Stockli</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Info</h4>
+      <ul>
+        <li><a href="#">About Kypre</a></li>
+        <li><a href="#">Shipping & Returns</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Kypre. All rights reserved.</span>
+    <span>Powered by <a href="#">Summit Operations Partners</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
