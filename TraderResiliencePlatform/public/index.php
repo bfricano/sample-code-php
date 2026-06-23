@@ -16,7 +16,7 @@ if (str_starts_with($uri, '/api/')) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>APEX Trader — Institutional Performance Platform</title>
+<title>REGPE — Institutional Performance Platform</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -28,7 +28,7 @@ if (str_starts_with($uri, '/api/')) {
 <nav id="sidebar">
   <div class="sidebar-logo">
     <span class="logo-icon">▲</span>
-    <span class="logo-text">APEX</span>
+    <span class="logo-text">REGPE</span>
   </div>
   <div class="sidebar-nav">
     <a href="#" class="nav-item active" data-view="dashboard">

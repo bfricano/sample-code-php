@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   APEX Trader — Main SPA
+   REGPE — Main SPA
    ═══════════════════════════════════════════════════════════════ */
 
 'use strict';
@@ -1527,7 +1527,8 @@ function renderSettings(profile) {
       <div class="card">
         <div class="card-header"><span class="card-title">Platform Information</span></div>
         <div style="color:var(--text-secondary);font-size:13px;line-height:2">
-          <div><span style="color:var(--text-muted)">Platform:</span> APEX Trader v1.0</div>
+          <div><span style="color:var(--text-muted)">Platform:</span> REGPE v1.0</div>
+          <div><span style="color:var(--text-muted)">Domain:</span> regpe.com</div>
           <div><span style="color:var(--text-muted)">Engine:</span> PHP 8.4 + SQLite</div>
           <div><span style="color:var(--text-muted)">Category:</span> Institutional Performance</div>
         </div>

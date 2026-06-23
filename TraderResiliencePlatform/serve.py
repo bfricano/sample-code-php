@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-APEX Trader — Development Server
+REGPE — Development Server
 Proxies requests: /api/* → PHP built-in server, rest → PHP built-in server
 Usage: python3 serve.py [port]
 """
@@ -67,7 +67,7 @@ class Handler(http.server.BaseHTTPRequestHandler):
 time.sleep(0.5)  # wait for PHP server
 with socketserver.TCPServer(('', PORT), Handler) as httpd:
     httpd.allow_reuse_address = True
-    print(f'\n  ▲ APEX Trader running at http://localhost:{PORT}')
+    print(f'\n  ▲ REGPE running at http://localhost:{PORT}')
     print(f'  PHP backend on port {PHP_PORT}')
     print(f'  Press Ctrl+C to stop\n')
     httpd.serve_forever()
