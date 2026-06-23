@@ -43,3 +43,4 @@
 # PHP Storm
 /.idea/*
 
+*.db
